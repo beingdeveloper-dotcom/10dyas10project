@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Titillium+Web:wght@300;400;600&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 1.125rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --logo-color: #92212a;
+  --logo-size: 1.6rem;
+  --logo-weight: 700;
+  --nav-size: 1.125rem;
+  --nav-color: #224040;
+  --h1-color: #92212a;
+  --h1-size: 2.87rem;
+  --text-color: #224040;
+  --text-size: 1.125rem;
+  --facebook-color: #4267b2;
+  --twitter-color: #1da1f2;
+  --radius-stroke: #f2a30a;
+  /* button */
+  --btn-primary: #92212a;
+  --btn-size: 1.22rem;
+}
+
+body {
+  /* font-family: 'Lobster Two', cursive; */
+  font-family: "Titillium Web", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* basic classes */
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: var(--nav-color);
+  display: inline-block;
+  text-decoration: none;
+}
+h1 {
+  color: var(--h1-color);
+  font-size: var(--h1-size);
+  line-height: 1.2;
+}
+/* header & navigation */
+header {
+  position: relative;
+  width: 100%;
+  height: 17vh;
+  /* border: 2px solid #222; */
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+nav > .logo-name {
+  color: var(--logo-color);
+  font-size: var(--logo-size);
+  font-weight: var(--logo-weight);
+  font-family: "Lobster Two", cursive;
+  margin-left: -2em;
+}
+nav > .logo-name ~ ul {
+  display: flex;
+}
+nav > .logo-name + ul a {
+  font-weight: 400;
+  color: var(--nav-color);
+  transition: color 0.5s ease-out;
+}
+nav > .logo-name + ul a:hover {
+  color: var(--logo-color);
+}
+nav > .logo-name ~ ul a {
+  margin-right: 2em;
+  text-transform: capitalize;
+}
+/* main */
+main {
+  position: relative;
+  height: 100vh;
+  margin-top: 1.5em;
+}
+main > .main-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2em;
+}
+.main-body .main-text {
+  flex-basis: 40%;
+  color: var(--text-color);
+}
+.main-text > * {
+  margin-bottom: 0.4em;
+}
+.main-text h1 {
+  max-width: 362px;
+}
+.main-body .main-img {
+  width: 528px;
+  height: 528px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+}
+.main-body .main-img::before {
+  content: "";
+  position: absolute;
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  background-color: transparent;
+  right: -10px;
+  top: -10px;
+  border: 10px solid var(--radius-stroke);
+}
+.main-body .main-img::after {
+  content: "";
+  position: absolute;
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  background-color: transparent;
+  right: 15px;
+  bottom: -25px;
+  border: 10px solid var(--radius-stroke);
+}
+.main-body .main-img .img-circle {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+.main-img .img-circle > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.main-img .img-circle + .book-circle {
+  width: 250px;
+  height: 250px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -88px;
+  left: -15px;
+  border: 10px solid var(--radius-stroke);
+}
+.img-circle + .book-circle > img {
+  height: 230px;
+  border-radius: inherit;
+}
+/* button */
+.btn-primary {
+  background-color: transparent;
+  font-size: var(--btn-size);
+  display: inline-block;
+  width: 16vw;
+  text-align: center;
+  line-height: 1;
+  padding: 0.5em;
+  border-radius: 50px;
+  margin-top: 0.56em;
+  border: 2px solid var(--btn-primary);
+  cursor: pointer;
+  transition: background-color 0.4s ease-in;
+  color: var(--text-color);
+}
+.btn-primary:hover {
+  background-color: var(--btn-primary);
+  color: #e6dede;
+}
+.fa-facebook:hover {
+  color: var(--facebook-color) !important;
+}
+.fa-twitter-square:hover {
+  color: var(--twitter-color) !important;
+}
